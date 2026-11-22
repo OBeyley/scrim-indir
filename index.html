@@ -1122,7 +1122,7 @@
 
   <script>
     const CONFIG = {
-      githubOwner: "celebiokanberat",
+      githubOwner: "OBeyley",
       githubRepo: "scrim-indir",
       whatsappNumber: "6282343876036",
       whatsappMessage: "Merhaba, Scrim Yönetici Pro hakkında bilgi almak istiyorum."
@@ -1244,30 +1244,44 @@
       renderPlans(btn.dataset.cat);
     });
 
-    // Silent background fetch for direct latest APK link (no developer version banners)
-    const releasesFallback = `https://github.com/${CONFIG.githubOwner}/${CONFIG.githubRepo}/releases/latest`;
+    // Silent background fetch for direct latest APK link (auto-detects scrim-indir or OBeyley.github.io)
+    const detectedRepo = (() => {
+      const host = (window.location.hostname || "").toLowerCase();
+      const seg = (window.location.pathname || "/").split("/").filter(Boolean)[0];
+      if (host.endsWith(".github.io")) {
+        return seg || `${CONFIG.githubOwner}.github.io`;
+      }
+      return CONFIG.githubRepo;
+    })();
+    const releasesFallback = `https://github.com/${CONFIG.githubOwner}/${detectedRepo}/releases/latest`;
     const heroBtn = document.getElementById("heroDownloadBtn");
     const navBtn = document.getElementById("navDownloadBtn");
     heroBtn.href = releasesFallback;
     navBtn.href = releasesFallback;
 
     async function syncApkLink() {
-      try {
-        const res = await fetch(`https://api.github.com/repos/${CONFIG.githubOwner}/${CONFIG.githubRepo}/releases/latest`, {
-          headers: { "Accept": "application/vnd.github+json" }
-        });
-        if (!res.ok) return;
-        const data = await res.json();
-        const apk = (data.assets || []).find(a => a.name && a.name.toLowerCase().endsWith(".apk"));
-        if (apk && apk.browser_download_url) {
-          heroBtn.href = apk.browser_download_url;
-          navBtn.href = apk.browser_download_url;
-          if (apk.size) {
-            const mb = (apk.size / (1024 * 1024)).toFixed(1);
-            document.getElementById("metaSize").textContent = `${mb} MB · Ücretsiz indirme`;
+      const candidates = detectedRepo === CONFIG.githubRepo
+        ? [detectedRepo]
+        : [detectedRepo, CONFIG.githubRepo];
+      for (const repo of candidates) {
+        try {
+          const res = await fetch(`https://api.github.com/repos/${CONFIG.githubOwner}/${repo}/releases/latest`, {
+            headers: { "Accept": "application/vnd.github+json" }
+          });
+          if (!res.ok) continue;
+          const data = await res.json();
+          const apk = (data.assets || []).find(a => a.name && a.name.toLowerCase().endsWith(".apk"));
+          if (apk && apk.browser_download_url) {
+            heroBtn.href = apk.browser_download_url;
+            navBtn.href = apk.browser_download_url;
+            if (apk.size) {
+              const mb = (apk.size / (1024 * 1024)).toFixed(1);
+              document.getElementById("metaSize").textContent = `${mb} MB · Ücretsiz indirme`;
+            }
+            return;
           }
-        }
-      } catch (_) {}
+        } catch (_) {}
+      }
     }
     syncApkLink();
 
