@@ -1,0 +1,2682 @@
+<!DOCTYPE html>
+<html lang="tr" data-mode="light" data-accent="obeyley">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#FAF6F4" />
+  <title>Scrim Yönetici Pro — Maç Bitsin, Tablo Saniyelerde Yayında Olsun</title>
+  <meta name="description" content="PUBG Mobile organizatörleri için yapay zekâ turnuva araç seti. Maç bitsin, 334+ şablonla puan tablosu, MVP ve TOP 3 seti saniyelerde yayında olsun." />
+  <!-- OpenGraph / WhatsApp / Discord Link Önizleme -->
+  <link rel="canonical" href="https://obeyley.github.io/scrim-indir/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://obeyley.github.io/scrim-indir/" />
+  <meta property="og:locale" content="tr_TR" />
+  <meta property="og:site_name" content="Scrim Yönetici Pro • OBEYLEY" />
+  <meta property="og:title" content="Scrim Yönetici Pro v30.9 — Maç Bitsin, Tablo Saniyelerde Yayında Olsun" />
+  <meta property="og:description" content="10 sn Video &amp; AI OCR ile skorları %99 oku; 108 HD Pro Stüdyo + 226 Klasik şablonla PMGO, PMGC, PMPL, MVP ve TOP 3 çıktını tek dokunuşta al." />
+  <meta property="og:image" content="https://obeyley.github.io/scrim-indir/og-cover.png" />
+  <meta property="og:image:secure_url" content="https://obeyley.github.io/scrim-indir/og-cover.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Scrim Yönetici Pro v30.9 OBEYLEY — Maç Bitsin, Tablo Saniyelerde Yayında Olsun" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Scrim Yönetici Pro v30.9 — Mobil Turnuva &amp; Yayın Stüdyosu" />
+  <meta name="twitter:description" content="334+ HD şablon ve 10 sn Video OCR tek Android uygulamasında." />
+  <meta name="twitter:image" content="https://obeyley.github.io/scrim-indir/og-cover.png" />
+  <meta name="twitter:image:alt" content="Scrim Yönetici Pro v30.9 OBEYLEY — 334+ HD Şablon ve 10 sn Video OCR" />
+  <link rel="icon" type="image/webp" href="app_icon.webp" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      /* Warm Editorial Paper Light Mode */
+      --bg: #FAF6F4;
+      --bg-subtle: #F3ECEA;
+      --surface: #FFFFFF;
+      --surface-2: #F5EFF0;
+      --border: rgba(28, 22, 26, 0.09);
+      --border-strong: rgba(28, 22, 26, 0.16);
+      --text: #1B1719;
+      --text-secondary: #534B50;
+      --text-muted: #82787E;
+      --ghost-text: rgba(27, 23, 25, 0.34);
+      --accent: #6D28D9;
+      --accent-hover: #5B21B6;
+      --accent-2: #0891B2;
+      --accent-soft: rgba(109, 40, 217, 0.10);
+      --accent-border: rgba(109, 40, 217, 0.30);
+      --on-accent: #FFFFFF;
+      --nav-bg: rgba(250, 246, 244, 0.88);
+      --hero-glow: radial-gradient(64% 48% at 78% 18%, rgba(124, 58, 237, 0.14), rgba(236, 72, 153, 0.08) 46%, transparent 100%);
+      --card-shadow: 0 14px 34px rgba(24, 18, 28, 0.08);
+      --pill-glass: rgba(255, 255, 255, 0.90);
+      --pill-glass-txt: #6D28D9;
+      --fade-mask-bg: #FAF6F4;
+      --btn-dark-bg: #141216;
+      --btn-dark-txt: #FFFFFF;
+      --font-display: 'Anton', Impact, 'Arial Narrow', sans-serif;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+    }
+
+    /* Optional Accent Themes (selectable inside 3-line drawer) */
+    [data-accent="burgundy"] {
+      --accent: #823344;
+      --accent-hover: #6C2736;
+      --accent-2: #B84A5E;
+      --accent-soft: rgba(130, 51, 68, 0.11);
+      --accent-border: rgba(130, 51, 68, 0.32);
+      --hero-glow: radial-gradient(64% 48% at 78% 18%, rgba(190, 82, 102, 0.16), rgba(244, 162, 172, 0.09) 46%, transparent 100%);
+      --pill-glass-txt: #823344;
+    }
+
+    [data-accent="emerald"] {
+      --accent: #059669;
+      --accent-hover: #047857;
+      --accent-2: #10B981;
+      --accent-soft: rgba(5, 150, 105, 0.10);
+      --accent-border: rgba(5, 150, 105, 0.32);
+      --hero-glow: radial-gradient(64% 48% at 78% 18%, rgba(16, 185, 129, 0.15), rgba(6, 182, 212, 0.06) 46%, transparent 100%);
+      --pill-glass-txt: #047857;
+    }
+
+    /* Dark Mode (toggled via top-right Moon/Sun circle button) */
+    [data-mode="dark"] {
+      --bg: #0B0A11;
+      --bg-subtle: #12101C;
+      --surface: #171425;
+      --surface-2: #1F1B32;
+      --border: rgba(255, 255, 255, 0.09);
+      --border-strong: rgba(255, 255, 255, 0.17);
+      --text: #F6F4FA;
+      --text-secondary: #A6A0B8;
+      --text-muted: #726C85;
+      --ghost-text: rgba(255, 255, 255, 0.28);
+      --accent: #9F6BFF;
+      --accent-hover: #8B5CF6;
+      --accent-2: #22D3EE;
+      --accent-soft: rgba(159, 107, 255, 0.15);
+      --accent-border: rgba(159, 107, 255, 0.40);
+      --on-accent: #FFFFFF;
+      --nav-bg: rgba(11, 10, 17, 0.86);
+      --hero-glow: radial-gradient(64% 48% at 76% 14%, rgba(139, 92, 246, 0.24), rgba(6, 182, 212, 0.10) 48%, transparent 100%);
+      --card-shadow: 0 18px 46px rgba(0, 0, 0, 0.46);
+      --pill-glass: rgba(15, 13, 26, 0.86);
+      --pill-glass-txt: #C4B5FD;
+      --fade-mask-bg: #0B0A11;
+      --btn-dark-bg: #F6F4FA;
+      --btn-dark-txt: #0B0A11;
+    }
+
+    [data-mode="dark"][data-accent="burgundy"] {
+      --accent: #E0637E;
+      --accent-hover: #C84E68;
+      --accent-2: #F490A4;
+      --accent-soft: rgba(224, 99, 126, 0.16);
+      --accent-border: rgba(224, 99, 126, 0.42);
+      --hero-glow: radial-gradient(64% 48% at 76% 14%, rgba(224, 99, 126, 0.22), transparent 100%);
+      --pill-glass-txt: #FDA4AF;
+    }
+
+    [data-mode="dark"][data-accent="emerald"] {
+      --accent: #1CE589;
+      --accent-hover: #10B981;
+      --accent-2: #34D399;
+      --accent-soft: rgba(28, 229, 137, 0.14);
+      --accent-border: rgba(28, 229, 137, 0.38);
+      --on-accent: #04130A;
+      --hero-glow: radial-gradient(64% 48% at 76% 14%, rgba(16, 185, 129, 0.22), transparent 100%);
+      --pill-glass-txt: #34D399;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background: var(--bg);
+    }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.62;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      transition: background-color 0.22s ease, color 0.22s ease;
+    }
+
+    a { color: inherit; }
+
+    .container {
+      width: 100%;
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 22px;
+    }
+
+    .display {
+      font-family: var(--font-display);
+      text-transform: uppercase;
+      font-weight: 400;
+      letter-spacing: 0.01em;
+    }
+
+    .mono {
+      font-family: var(--font-mono);
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* TOP PROGRESS BAR */
+    .scroll-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 2.5px;
+      width: 0%;
+      background: var(--accent);
+      z-index: 120;
+      pointer-events: none;
+    }
+
+    /* STICKY HEADER */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 70;
+      background: var(--nav-bg);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      height: 66px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+
+    .brand-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 9px;
+      overflow: hidden;
+      border: 1px solid var(--border-strong);
+      flex-shrink: 0;
+    }
+
+    .brand-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .brand-word {
+      font-family: var(--font-display);
+      font-size: 22px;
+      line-height: 1;
+      letter-spacing: 0.015em;
+      text-transform: uppercase;
+      color: var(--text);
+    }
+
+    .nav-desktop-links {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+    }
+
+    .nav-link {
+      text-decoration: none;
+      font-size: 13.5px;
+      font-weight: 500;
+      color: var(--text-secondary);
+      padding: 7px 11px;
+      border-radius: 9px;
+      transition: color 0.15s ease, background 0.15s ease;
+    }
+
+    .nav-link:hover, .nav-link.active {
+      color: var(--text);
+      background: var(--surface-2);
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      position: relative;
+    }
+
+    .icon-circle-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid var(--border-strong);
+      background: var(--surface);
+      color: var(--text);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: border-color 0.15s ease, transform 0.15s ease, background 0.15s ease;
+    }
+
+    .icon-circle-btn:hover {
+      border-color: var(--accent-border);
+      background: var(--surface-2);
+      transform: translateY(-1px);
+    }
+
+    .lang-popover {
+      position: absolute;
+      top: 50px;
+      right: 54px;
+      background: var(--surface);
+      border: 1px solid var(--border-strong);
+      border-radius: 13px;
+      padding: 6px;
+      min-width: 146px;
+      box-shadow: var(--card-shadow);
+      display: none;
+      flex-direction: column;
+      gap: 2px;
+      z-index: 80;
+    }
+
+    .lang-popover.open { display: flex; }
+
+    .lang-opt {
+      border: none;
+      background: transparent;
+      color: var(--text-secondary);
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 8px 11px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+    }
+
+    .lang-opt:hover { background: var(--surface-2); color: var(--text); }
+    .lang-opt.active { background: var(--accent-soft); color: var(--accent); }
+
+    .hamburger-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      border: none;
+      background: transparent;
+      color: var(--text);
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      cursor: pointer;
+      transition: background 0.15s ease;
+    }
+
+    .hamburger-btn:hover { background: var(--surface-2); }
+
+    .hamburger-btn span {
+      width: 22px;
+      height: 2px;
+      border-radius: 2px;
+      background: currentColor;
+      transition: transform 0.22s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.16s ease;
+      transform-origin: center;
+    }
+
+    .hamburger-btn[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger-btn[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+    .hamburger-btn[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    @media (max-width: 920px) {
+      .nav-desktop-links { display: none; }
+    }
+
+    @media (max-width: 420px) {
+      .brand-word { font-size: 19px; }
+      .icon-circle-btn { width: 37px; height: 37px; }
+    }
+
+    /* SLIDE-OVER 3-LINE DRAWER */
+    .drawer-backdrop {
+      position: fixed;
+      inset: 0;
+      z-index: 95;
+      background: rgba(12, 10, 16, 0.56);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.22s ease, visibility 0.22s ease;
+    }
+
+    .drawer-backdrop.open { opacity: 1; visibility: visible; }
+
+    .drawer {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: min(350px, 88vw);
+      z-index: 100;
+      background: var(--surface);
+      border-left: 1px solid var(--border-strong);
+      display: flex;
+      flex-direction: column;
+      transform: translateX(100%);
+      transition: transform 0.26s cubic-bezier(0.22, 1, 0.36, 1);
+      box-shadow: -20px 0 60px rgba(0, 0, 0, 0.24);
+    }
+
+    .drawer.open { transform: translateX(0); }
+
+    .drawer-head {
+      height: 66px;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .drawer-close {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 1px solid var(--border-strong);
+      background: var(--bg);
+      color: var(--text);
+      font-size: 20px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .drawer-body {
+      flex: 1;
+      overflow-y: auto;
+      padding: 18px 20px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+
+    .drawer-lbl {
+      font-family: var(--font-mono);
+      font-size: 10.5px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+
+    .drawer-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .drawer-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 11px 12px;
+      border-radius: 11px;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      border: none;
+      background: transparent;
+      font-family: inherit;
+      width: 100%;
+      cursor: pointer;
+      transition: background 0.15s ease, color 0.15s ease;
+    }
+
+    .drawer-link:hover, .drawer-link.active {
+      background: var(--surface-2);
+      color: var(--text);
+    }
+
+    .accent-pills {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+    }
+
+    .accent-pill {
+      padding: 9px 8px;
+      border-radius: 10px;
+      border: 1px solid var(--border-strong);
+      background: var(--bg);
+      color: var(--text-secondary);
+      font-family: inherit;
+      font-size: 12px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      cursor: pointer;
+    }
+
+    .accent-pill.active {
+      border-color: var(--accent);
+      background: var(--accent-soft);
+      color: var(--accent);
+    }
+
+    .accent-dot {
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+    }
+
+    .drawer-foot {
+      padding: 16px 20px 20px;
+      border-top: 1px solid var(--border);
+    }
+
+    /* HERO SECTION */
+    .hero {
+      padding: 46px 0 68px;
+      background-image: var(--hero-glow);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 44px;
+      align-items: center;
+    }
+
+    @media (max-width: 920px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+    }
+
+    .hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(46px, 9.2vw, 76px);
+      line-height: 0.96;
+      letter-spacing: 0.005em;
+      text-transform: uppercase;
+      color: var(--text);
+      margin-bottom: 20px;
+      font-weight: 400;
+    }
+
+    .hero h1 .accent-line {
+      color: var(--accent);
+      display: block;
+    }
+
+    .hero-desc {
+      font-size: clamp(15.5px, 1.9vw, 17px);
+      color: var(--text-secondary);
+      line-height: 1.66;
+      max-width: 520px;
+      margin-bottom: 26px;
+    }
+
+    .store-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .store-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 11px;
+      padding: 11px 18px;
+      border-radius: 13px;
+      text-decoration: none;
+      background: var(--btn-dark-bg);
+      color: var(--btn-dark-txt);
+      border: 1px solid var(--border-strong);
+      transition: transform 0.15s ease, opacity 0.15s ease;
+      min-width: 174px;
+    }
+
+    .store-badge:hover {
+      transform: translateY(-2px);
+      opacity: 0.94;
+    }
+
+    .store-badge.accent-outline {
+      background: var(--surface);
+      color: var(--text);
+      border: 1.5px solid var(--accent-border);
+    }
+
+    .store-badge.accent-outline:hover {
+      background: var(--accent-soft);
+    }
+
+    .sb-txt {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.15;
+    }
+
+    .sb-sub {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      opacity: 0.78;
+    }
+
+    .sb-main {
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: -0.015em;
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, max-content));
+      gap: 10px 28px;
+    }
+
+    .h-stat {
+      display: flex;
+      align-items: baseline;
+      gap: 7px;
+      font-size: 14px;
+      color: var(--text-secondary);
+    }
+
+    .h-stat strong {
+      font-weight: 800;
+      color: var(--text);
+      font-size: 15.5px;
+    }
+
+    .h-stat .star {
+      color: var(--accent);
+      font-size: 13px;
+    }
+
+    /* HERO RIGHT VISUAL STACK */
+    .hero-visual-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .input-pair {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .input-mini-card {
+      position: relative;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid var(--border-strong);
+      background: #100E18;
+      aspect-ratio: 16 / 10;
+      cursor: zoom-in;
+      box-shadow: var(--card-shadow);
+    }
+
+    .input-mini-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+    }
+
+    .input-mini-pill {
+      position: absolute;
+      left: 8px;
+      bottom: 8px;
+      padding: 4px 9px;
+      border-radius: 7px;
+      background: rgba(11, 10, 17, 0.84);
+      color: #FFFFFF;
+      font-size: 11px;
+      font-weight: 700;
+      backdrop-filter: blur(6px);
+    }
+
+    .stage-label {
+      font-size: 12.5px;
+      font-weight: 500;
+      color: var(--text-muted);
+      margin-top: -6px;
+    }
+
+    .fan-showcase {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 0 8px;
+      min-height: 290px;
+    }
+
+    .fan-card {
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1.5px solid var(--border-strong);
+      box-shadow: 0 20px 44px rgba(15, 12, 24, 0.24);
+      cursor: zoom-in;
+      transition: transform 0.26s cubic-bezier(0.22, 1, 0.36, 1), z-index 0.1s;
+      background: #0F0D18;
+    }
+
+    .fan-card img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .fan-card.left {
+      width: 39%;
+      aspect-ratio: 4 / 5;
+      margin-right: -13%;
+      transform: translateY(12px) scale(0.92);
+      z-index: 1;
+      opacity: 0.94;
+    }
+
+    .fan-card.center {
+      width: 48%;
+      aspect-ratio: 4 / 5;
+      z-index: 3;
+      box-shadow: 0 24px 56px rgba(15, 12, 24, 0.34);
+    }
+
+    .fan-card.right {
+      width: 39%;
+      aspect-ratio: 4 / 5;
+      margin-left: -13%;
+      transform: translateY(12px) scale(0.92);
+      z-index: 2;
+      opacity: 0.94;
+    }
+
+    .fan-card:hover {
+      transform: translateY(-6px) scale(1.03);
+      z-index: 5;
+    }
+
+    /* SECTIONS */
+    .section {
+      padding: 76px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .sec-title-lg {
+      font-family: var(--font-display);
+      font-size: clamp(34px, 7vw, 54px);
+      line-height: 0.98;
+      text-transform: uppercase;
+      font-weight: 400;
+      color: var(--text);
+      margin-bottom: 14px;
+    }
+
+    .sec-lead {
+      font-size: 16px;
+      color: var(--text-secondary);
+      max-width: 600px;
+      line-height: 1.65;
+    }
+
+    /* 3-STEP SECTION */
+    .steps-list {
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .step-item {
+      display: grid;
+      grid-template-columns: 185px 1fr;
+      gap: 26px;
+      align-items: center;
+    }
+
+    @media (min-width: 860px) {
+      .steps-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 28px;
+      }
+      .step-item {
+        grid-template-columns: 1fr;
+        align-items: start;
+        gap: 18px;
+      }
+    }
+
+    @media (max-width: 460px) {
+      .step-item {
+        grid-template-columns: 142px 1fr;
+        gap: 16px;
+      }
+    }
+
+    .step-phone-mask {
+      position: relative;
+      border-radius: 22px;
+      overflow: hidden;
+      border: 1px solid var(--border-strong);
+      background: #100E1A;
+      max-height: 270px;
+      box-shadow: var(--card-shadow);
+      cursor: zoom-in;
+    }
+
+    .step-phone-mask img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .step-phone-mask::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 58px;
+      background: linear-gradient(to top, var(--fade-mask-bg), transparent);
+      pointer-events: none;
+    }
+
+    .step-copy {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 12px;
+      align-items: start;
+    }
+
+    .step-big-num {
+      font-family: var(--font-display);
+      font-size: clamp(40px, 6vw, 52px);
+      line-height: 0.88;
+      color: var(--accent);
+      font-weight: 400;
+    }
+
+    .step-copy h3 {
+      font-family: var(--font-display);
+      font-size: clamp(23px, 4.2vw, 29px);
+      line-height: 1.02;
+      text-transform: uppercase;
+      font-weight: 400;
+      margin-bottom: 10px;
+      color: var(--text);
+    }
+
+    .step-copy p {
+      font-size: 14.5px;
+      color: var(--text-secondary);
+      line-height: 1.62;
+    }
+
+    /* SIGNATURE "334+ TASARIM" OVERLAPPING MARQUEE */
+    .marquee-sec {
+      padding: 76px 0 80px;
+      border-bottom: 1px solid var(--border);
+      overflow: hidden;
+    }
+
+    .mega-banner-wrap {
+      text-align: center;
+      margin-bottom: -24px;
+      position: relative;
+      z-index: 1;
+      padding: 0 12px;
+      user-select: none;
+    }
+
+    .mega-banner {
+      font-family: var(--font-display);
+      font-size: clamp(54px, 14vw, 134px);
+      line-height: 0.88;
+      text-transform: uppercase;
+      letter-spacing: 0.01em;
+      font-weight: 400;
+      white-space: nowrap;
+    }
+
+    .mega-banner .num { color: var(--accent); }
+    .mega-banner .word { color: var(--ghost-text); margin-left: 8px; }
+
+    .marquee-lanes {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .marquee-lane {
+      overflow: hidden;
+      mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+      -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+      padding: 4px 0;
+    }
+
+    .marquee-track {
+      display: flex;
+      gap: 16px;
+      width: max-content;
+      animation: marqL 46s linear infinite;
+    }
+
+    .marquee-track.rev {
+      animation: marqR 50s linear infinite;
+    }
+
+    .marquee-lane:hover .marquee-track {
+      animation-play-state: paused;
+    }
+
+    @keyframes marqL {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    @keyframes marqR {
+      from { transform: translateX(-50%); }
+      to { transform: translateX(0); }
+    }
+
+    .tpl-poster {
+      position: relative;
+      width: 210px;
+      height: 262px;
+      border-radius: 18px;
+      overflow: hidden;
+      flex-shrink: 0;
+      border: 1px solid var(--border-strong);
+      background: #12101A;
+      box-shadow: var(--card-shadow);
+      cursor: zoom-in;
+      transition: transform 0.22s ease;
+    }
+
+    @media (min-width: 760px) {
+      .tpl-poster { width: 236px; height: 295px; }
+    }
+
+    .tpl-poster:hover {
+      transform: translateY(-4px) scale(1.015);
+    }
+
+    .tpl-poster img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .tpl-pill {
+      position: absolute;
+      top: 11px;
+      left: 11px;
+      padding: 5px 11px;
+      border-radius: 9px;
+      background: var(--pill-glass);
+      color: var(--pill-glass-txt);
+      font-size: 12px;
+      font-weight: 700;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.16);
+    }
+
+    .marquee-cta-wrap {
+      text-align: center;
+      margin-top: 32px;
+      padding: 0 18px;
+    }
+
+    .btn-solid-accent {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 15px 30px;
+      border-radius: 14px;
+      background: var(--accent);
+      color: var(--on-accent);
+      border: none;
+      text-decoration: none;
+      font-family: inherit;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 10px 26px var(--accent-soft);
+      transition: background 0.15s ease, transform 0.15s ease;
+    }
+
+    .btn-solid-accent:hover {
+      background: var(--accent-hover);
+      transform: translateY(-2px);
+    }
+
+    .marquee-subnote {
+      margin-top: 14px;
+      font-size: 13.5px;
+      color: var(--text-muted);
+    }
+
+    /* "SENİN İÇİN HAZIRLADIKLARI" EDITORIAL BLOCKS */
+    .editorial-blocks {
+      margin-top: 42px;
+      display: flex;
+      flex-direction: column;
+      gap: 56px;
+    }
+
+    .ed-ocr-row {
+      display: grid;
+      grid-template-columns: 210px 1fr;
+      gap: 28px;
+      align-items: center;
+    }
+
+    @media (max-width: 560px) {
+      .ed-ocr-row {
+        grid-template-columns: 126px 1fr;
+        gap: 16px;
+        align-items: start;
+      }
+    }
+
+    .ed-stacked-thumbs {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .ed-thumb {
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border-strong);
+      aspect-ratio: 16 / 10;
+      background: #100E19;
+      cursor: zoom-in;
+      box-shadow: var(--card-shadow);
+    }
+
+    .ed-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+    }
+
+    .ed-heading-sm {
+      font-family: var(--font-display);
+      font-size: clamp(26px, 5vw, 38px);
+      line-height: 1.0;
+      text-transform: uppercase;
+      font-weight: 400;
+      margin-bottom: 12px;
+    }
+
+    .ed-body {
+      font-size: 15px;
+      color: var(--text-secondary);
+      line-height: 1.66;
+      max-width: 580px;
+    }
+
+    .ed-kicker-block {
+      margin-top: 20px;
+    }
+
+    .ed-vline {
+      width: 2.5px;
+      height: 18px;
+      background: var(--accent);
+      border-radius: 2px;
+      margin-bottom: 8px;
+    }
+
+    .ed-kicker-txt {
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+
+    .dual-posters {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .dual-poster-card {
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--border-strong);
+      background: #12101A;
+      box-shadow: var(--card-shadow);
+      cursor: zoom-in;
+      transition: transform 0.2s ease;
+    }
+
+    .dual-poster-card:hover { transform: translateY(-3px); }
+
+    .dual-poster-card img {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      display: block;
+    }
+
+    .dual-poster-card.sq img { aspect-ratio: 1 / 1; }
+    .dual-poster-card.phone img { aspect-ratio: 9 / 16; object-position: top center; }
+
+    .explorer-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 24px;
+      box-shadow: var(--card-shadow);
+    }
+
+    .tab-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 18px;
+    }
+
+    .tab-chip {
+      border: 1px solid var(--border-strong);
+      background: var(--bg);
+      color: var(--text-secondary);
+      font-family: inherit;
+      font-size: 12.5px;
+      font-weight: 600;
+      padding: 7px 13px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .tab-chip:hover { color: var(--text); border-color: var(--accent-border); }
+    .tab-chip.active {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: var(--on-accent);
+    }
+
+    .explorer-stage {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      align-items: center;
+    }
+
+    @media (max-width: 780px) {
+      .explorer-stage { grid-template-columns: 1fr; }
+    }
+
+    .explorer-img-wrap {
+      background: var(--bg-subtle);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 14px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .explorer-img-wrap img {
+      max-height: 440px;
+      max-width: 100%;
+      width: auto;
+      border-radius: 12px;
+      box-shadow: 0 14px 36px rgba(0, 0, 0, 0.25);
+      cursor: zoom-in;
+    }
+
+    .check-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .check-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 9px;
+      font-size: 14px;
+      color: var(--text);
+    }
+
+    .check-list svg {
+      color: var(--accent);
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+
+    /* EXTRA CAPABILITIES */
+    .cap-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 820px) { .cap-grid { grid-template-columns: 1fr; } }
+
+    .cap-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 22px;
+      box-shadow: var(--card-shadow);
+    }
+
+    .cap-card h4 {
+      font-family: var(--font-display);
+      font-size: 21px;
+      text-transform: uppercase;
+      font-weight: 400;
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+
+    .cap-card p {
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* FOUNDER STORY ("OBEYLEY İLE TANIŞ") */
+    .founder-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 34px;
+      display: grid;
+      grid-template-columns: 104px 1fr;
+      gap: 26px;
+      align-items: start;
+      box-shadow: var(--card-shadow);
+    }
+
+    @media (max-width: 640px) {
+      .founder-box { grid-template-columns: 1fr; padding: 24px; gap: 18px; }
+    }
+
+    .founder-logo {
+      width: 96px;
+      height: 96px;
+      border-radius: 22px;
+      overflow: hidden;
+      border: 1.5px solid var(--accent-border);
+      box-shadow: 0 12px 28px var(--accent-soft);
+    }
+
+    .founder-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .founder-box p {
+      font-size: 14.5px;
+      color: var(--text-secondary);
+      line-height: 1.72;
+      margin-bottom: 12px;
+    }
+
+    /* PRICING */
+    .trust-note {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 10px 16px;
+      border-radius: 12px;
+      background: var(--accent-soft);
+      border: 1px solid var(--accent-border);
+      color: var(--text);
+      font-size: 13px;
+      font-weight: 600;
+      margin: 22px 0 24px;
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    @media (max-width: 920px) { .pricing-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 600px) { .pricing-grid { grid-template-columns: 1fr; } }
+
+    .plan-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: var(--card-shadow);
+      transition: transform 0.18s ease, border-color 0.18s ease;
+    }
+
+    .plan-card:hover { transform: translateY(-2px); border-color: var(--border-strong); }
+
+    .plan-card.featured {
+      border: 2px solid var(--accent);
+    }
+
+    .plan-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .plan-tag {
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: var(--surface-2);
+      color: var(--text-secondary);
+    }
+
+    .plan-card.featured .plan-tag {
+      background: var(--accent);
+      color: var(--on-accent);
+    }
+
+    .plan-unit {
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+      color: var(--text-muted);
+    }
+
+    .plan-name {
+      font-size: 18px;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+
+    .plan-price {
+      display: flex;
+      align-items: baseline;
+      gap: 4px;
+      margin-bottom: 8px;
+    }
+
+    .plan-price strong {
+      font-family: var(--font-display);
+      font-size: 40px;
+      line-height: 1;
+      font-weight: 400;
+    }
+
+    .plan-price span {
+      font-weight: 800;
+      font-size: 18px;
+      color: var(--accent);
+    }
+
+    .plan-desc {
+      font-size: 13px;
+      color: var(--text-secondary);
+      margin-bottom: 16px;
+      min-height: 40px;
+    }
+
+    .plan-hr {
+      height: 1px;
+      background: var(--border);
+      margin-bottom: 14px;
+    }
+
+    .plan-features {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+      margin-bottom: 20px;
+      flex: 1;
+    }
+
+    .plan-features li {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.48;
+    }
+
+    .plan-features svg { color: var(--accent); flex-shrink: 0; margin-top: 2px; }
+
+    .plan-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 12px 16px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 700;
+      background: var(--surface-2);
+      color: var(--text);
+      border: 1px solid var(--border-strong);
+      transition: all 0.15s ease;
+    }
+
+    .plan-btn:hover { background: var(--accent-soft); border-color: var(--accent-border); color: var(--accent); }
+
+    .plan-card.featured .plan-btn {
+      background: var(--accent);
+      color: var(--on-accent);
+      border-color: var(--accent);
+    }
+
+    .plan-card.featured .plan-btn:hover { background: var(--accent-hover); }
+
+    /* FAQ */
+    .faq-list {
+      max-width: 780px;
+      margin-top: 32px;
+      border-top: 1px solid var(--border);
+    }
+
+    details.faq-item {
+      border-bottom: 1px solid var(--border);
+      padding: 18px 0;
+    }
+
+    details.faq-item summary {
+      list-style: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    details.faq-item summary::-webkit-details-marker { display: none; }
+
+    details.faq-item summary .plus {
+      font-size: 22px;
+      font-weight: 400;
+      color: var(--accent);
+      line-height: 1;
+      transition: transform 0.2s ease;
+    }
+
+    details.faq-item[open] summary .plus { transform: rotate(45deg); }
+
+    details.faq-item p {
+      margin-top: 10px;
+      font-size: 14.5px;
+      color: var(--text-secondary);
+      line-height: 1.66;
+      padding-right: 22px;
+    }
+
+    /* FINAL CTA */
+    .final-cta {
+      padding: 76px 0;
+      border-bottom: 1px solid var(--border);
+      background-image: var(--hero-glow);
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 52px 0 38px;
+      background: var(--bg-subtle);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 28px;
+      padding-bottom: 34px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    @media (max-width: 800px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 500px) { .footer-grid { grid-template-columns: 1fr; } }
+
+    .footer-bio p {
+      margin-top: 12px;
+      font-size: 13.5px;
+      color: var(--text-secondary);
+      max-width: 310px;
+      line-height: 1.6;
+    }
+
+    .footer-col h4 {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+
+    .footer-col a, .footer-col button {
+      background: none;
+      border: none;
+      padding: 0;
+      font-family: inherit;
+      font-size: 13.5px;
+      color: var(--text-secondary);
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .footer-col a:hover, .footer-col button:hover { color: var(--text); }
+
+    .footer-bottom {
+      padding-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 10px;
+      font-size: 12.5px;
+      color: var(--text-muted);
+    }
+
+    /* MODALS */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      z-index: 115;
+      background: rgba(10, 8, 16, 0.84);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 18px;
+    }
+
+    .modal-backdrop.open { display: flex; }
+
+    .modal-card {
+      width: 100%;
+      max-width: 620px;
+      max-height: 84vh;
+      overflow-y: auto;
+      background: var(--surface);
+      border: 1px solid var(--border-strong);
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: 0 24px 64px rgba(0, 0, 0, 0.55);
+    }
+
+    .modal-card.wide { max-width: 920px; }
+
+    .modal-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding-bottom: 14px;
+      margin-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .modal-body h4 { font-size: 14.5px; font-weight: 700; margin: 16px 0 6px; }
+    .modal-body h4:first-child { margin-top: 0; }
+    .modal-body p { font-size: 13.5px; color: var(--text-secondary); line-height: 1.65; }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    @media (max-width: 680px) { .gallery-grid { grid-template-columns: repeat(2, 1fr); } }
+
+    .gal-card {
+      position: relative;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid var(--border-strong);
+      background: #100E19;
+      cursor: zoom-in;
+    }
+
+    .gal-card img {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      display: block;
+    }
+
+    .gal-cap {
+      padding: 8px 10px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text);
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+    }
+
+    .lb-wrap {
+      max-width: 92vw;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .lb-wrap img {
+      max-width: 92vw;
+      max-height: 80vh;
+      border-radius: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      box-shadow: 0 24px 70px rgba(0, 0, 0, 0.72);
+    }
+
+    .lb-cap {
+      color: #F4F4F8;
+      font-size: 13.5px;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    .lb-close {
+      position: fixed;
+      top: 16px;
+      right: 16px;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      background: rgba(14, 12, 22, 0.84);
+      color: #FFFFFF;
+      font-size: 22px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .marquee-track, .marquee-track.rev { animation: none; }
+    }
+  </style>
+</head>
+<body id="top">
+  <div class="scroll-bar" id="scrollBar" aria-hidden="true"></div>
+
+  <!-- HEADER -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="#top" class="brand">
+        <span class="brand-icon"><img src="app_icon.webp" data-asset="app_icon" alt="Scrim Yönetici Pro" /></span>
+        <span class="brand-word">SCRIM YÖNETİCİ PRO</span>
+      </a>
+
+      <nav class="nav-desktop-links" aria-label="Ana menü">
+        <a href="#nasil-calisir" class="nav-link" data-i18n="nav_how">Nasıl çalışır</a>
+        <a href="#sablonlar" class="nav-link" data-i18n="nav_tpl">Tasarımlar</a>
+        <a href="#ozellikler" class="nav-link" data-i18n="nav_feat">Özellikler</a>
+        <a href="#obeyley" class="nav-link">OBEYLEY</a>
+        <a href="#paketler" class="nav-link" data-i18n="nav_price">Fiyatlar</a>
+        <a href="#sss" class="nav-link" data-i18n="nav_faq">SSS</a>
+      </nav>
+
+      <div class="nav-right">
+        <button type="button" class="icon-circle-btn" id="langBtn" aria-label="Dil seç" aria-expanded="false">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </button>
+
+        <div class="lang-popover" id="langPopover" role="menu">
+          <button type="button" class="lang-opt active" data-lang="tr"><span>Türkçe</span><span class="mono">TR</span></button>
+          <button type="button" class="lang-opt" data-lang="en"><span>English</span><span class="mono">EN</span></button>
+        </div>
+
+        <button type="button" class="icon-circle-btn" id="modeBtn" aria-label="Tema değiştir">
+          <svg id="moonIcon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg id="sunIcon" style="display:none;" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+
+        <button type="button" class="hamburger-btn" id="menuBtn" aria-label="Menüyü aç" aria-expanded="false" aria-controls="navDrawer">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- RIGHT SLIDE-OVER DRAWER -->
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <aside class="drawer" id="navDrawer" aria-hidden="true">
+    <div class="drawer-head">
+      <span class="brand-word" style="font-size:19px;">SCRIM YÖNETİCİ PRO</span>
+      <button type="button" class="drawer-close" id="drawerClose" aria-label="Kapat">×</button>
+    </div>
+
+    <div class="drawer-body">
+      <div>
+        <div class="drawer-lbl" data-i18n="dr_sections">Bölümler</div>
+        <nav class="drawer-nav">
+          <a href="#nasil-calisir" class="drawer-link" data-close-drawer><span data-i18n="nav_how">Nasıl çalışır</span><span>→</span></a>
+          <a href="#sablonlar" class="drawer-link" data-close-drawer><span data-i18n="dr_tpl">334+ Tasarım Vitrini</span><span>→</span></a>
+          <a href="#ozellikler" class="drawer-link" data-close-drawer><span data-i18n="nav_feat">Özellikler</span><span>→</span></a>
+          <a href="#obeyley" class="drawer-link" data-close-drawer><span>OBEYLEY ile tanış</span><span>→</span></a>
+          <a href="#paketler" class="drawer-link" data-close-drawer><span data-i18n="nav_price">Fiyatlar</span><span>→</span></a>
+          <a href="#sss" class="drawer-link" data-close-drawer><span data-i18n="nav_faq">SSS</span><span>→</span></a>
+        </nav>
+      </div>
+
+      <div>
+        <div class="drawer-lbl" data-i18n="dr_accent">Vurgu Rengi</div>
+        <div class="accent-pills" id="accentPicker">
+          <button type="button" class="accent-pill active" data-set-accent="obeyley">
+            <span class="accent-dot" style="background:#6D28D9;"></span><span>OBEYLEY</span>
+          </button>
+          <button type="button" class="accent-pill" data-set-accent="burgundy">
+            <span class="accent-dot" style="background:#823344;"></span><span>Bordo</span>
+          </button>
+          <button type="button" class="accent-pill" data-set-accent="emerald">
+            <span class="accent-dot" style="background:#059669;"></span><span>Zümrüt</span>
+          </button>
+        </div>
+      </div>
+
+      <div>
+        <div class="drawer-lbl" data-i18n="dr_links">Bağlantılar</div>
+        <div class="drawer-nav">
+          <a href="#" id="drawerWaBtn" class="drawer-link" target="_blank" rel="noopener"><span>WhatsApp Destek</span><span>↗</span></a>
+          <button type="button" class="drawer-link" id="drawerGalleryBtn"><span data-i18n="dr_gallery">Tüm Şablon Örnekleri</span><span>›</span></button>
+          <button type="button" class="drawer-link" data-legal="privacy"><span>Gizlilik Politikası</span><span>›</span></button>
+          <button type="button" class="drawer-link" data-legal="terms"><span>Kullanım Koşulları</span><span>›</span></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="drawer-foot">
+      <a href="#" id="drawerDownloadBtn" class="btn-solid-accent" style="width:100%;">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        <span data-i18n="btn_dl">Android için İndir</span>
+      </a>
+    </div>
+  </aside>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <h1 id="heroTitle">
+            MAÇ BİTSİN.<br />
+            TABLO SANİYELERDE<br />
+            <span class="accent-line">YAYINDA OLSUN.</span>
+          </h1>
+          <p class="hero-desc" data-i18n="hero_desc">
+            PUBG Mobile scrim ve turnuva organizatörleri için yapay zekâ turnuva araç seti. Lobi veya maç sonu ekranını yükle; Scrim Yönetici Pro sıralamaları ve killeri okur, ardından senin için PMGO, PMGC, PMPL puan tablosunu, MVP'yi, TOP 3 podyumu ve 6 maç kazananlarını hazırlar.
+          </p>
+
+          <div class="store-row">
+            <a href="#" id="heroDownloadBtn" class="store-badge">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              <span class="sb-txt">
+                <span class="sb-sub" id="heroApkSub">Ücretsiz Android APK</span>
+                <span class="sb-main" data-i18n="btn_dl_short">Android'den Edin</span>
+              </span>
+            </a>
+
+            <a href="#paketler" class="store-badge accent-outline">
+              <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+              <span class="sb-txt">
+                <span class="sb-sub">İtemSatış 7/24 Otomatik</span>
+                <span class="sb-main" data-i18n="btn_plans">Lisans Paketleri</span>
+              </span>
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="h-stat"><strong>334+ <span class="star">★</span></strong><span data-i18n="st_tpl">HD Pro &amp; Klasik</span></div>
+            <div class="h-stat"><strong>10 sn <span class="star">★</span></strong><span>Video &amp; AI OCR</span></div>
+            <div class="h-stat"><strong>8–25</strong><span data-i18n="st_teams">Dinamik Takım</span></div>
+            <div class="h-stat"><strong>3 Cihaz</strong><span data-i18n="st_team">Ortak Lobi</span></div>
+          </div>
+        </div>
+
+        <!-- RIGHT VISUAL SHOWCASE -->
+        <div class="hero-visual-stack">
+          <div class="input-pair">
+            <div class="input-mini-card" data-zoom-key="ui_ocr_dark" data-zoom-cap="Maç &amp; AI OCR — Gemini Vision &amp; 10 sn Video Tarama">
+              <img src="ui_ocr_dark.webp" data-asset="ui_ocr_dark" alt="AI OCR Ekranı" />
+              <span class="input-mini-pill">AI OCR &amp; Video</span>
+            </div>
+            <div class="input-mini-card" data-zoom-key="ui_studio_light" data-zoom-cap="Pro Stüdyo (108) — Scrim / PMGC Modu ve Dinamik Takım Uyarlama">
+              <img src="ui_studio_light.webp" data-asset="ui_studio_light" alt="Pro Stüdyo 108 Ekranı" />
+              <span class="input-mini-pill">Pro Stüdyo 108</span>
+            </div>
+          </div>
+          <div class="stage-label" data-i18n="lbl_screens">Uygulama ekranların</div>
+
+          <div class="fan-showcase">
+            <div class="fan-card left" data-zoom-key="tpl_obeyley_prism" data-zoom-cap="OBEYLEY Prizma — Mor-Turkuaz 16 Takım Genel Tablo">
+              <img src="tpl_obeyley_prism.webp" data-asset="tpl_obeyley_prism" alt="OBEYLEY Prizma Genel Tablo" />
+            </div>
+            <div class="fan-card center" data-zoom-key="tpl_pmgo_finals" data-zoom-cap="PMGO Grand Finals — 16 Takım + Sağda MAÇ 1–6 Kazananları">
+              <img src="tpl_pmgo_finals.webp" data-asset="tpl_pmgo_finals" alt="PMGO Grand Finals Tablosu" />
+            </div>
+            <div class="fan-card right" data-zoom-key="tpl_prime_crimson" data-zoom-cap="Prime Scrims — Kızıl-Beyaz Liderlik Tablosu">
+              <img src="tpl_prime_crimson.webp" data-asset="tpl_prime_crimson" alt="Prime Scrims Liderlik Tablosu" />
+            </div>
+          </div>
+          <div class="stage-label" data-i18n="lbl_outputs">Scrim Yönetici Pro'nun bunlardan yaptıkları</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 STEPS -->
+    <section id="nasil-calisir" class="section">
+      <div class="container">
+        <h2 class="sec-title-lg" data-i18n="how_title">YAYINA HAZIR BİR SETE ÜÇ DOKUNUŞ</h2>
+        <p class="sec-lead" data-i18n="how_desc">Elektronik tabloya ya da Photoshop'a ihtiyacın yok, ekran görüntülerinden sayı da kopyalamazsın. Görüntüleri yükle, Scrim Yönetici Pro tasarımları hazırlasın.</p>
+
+        <div class="steps-list">
+          <article class="step-item">
+            <div class="step-phone-mask" data-zoom-key="ui_lobby_dark" data-zoom-cap="Lobi &amp; Slot Yönetimi — 16/16 Doluluk &amp; Klan Hafızası">
+              <img src="ui_lobby_dark.webp" data-asset="ui_lobby_dark" alt="Lobi ekranı" />
+            </div>
+            <div class="step-copy">
+              <span class="step-big-num">1</span>
+              <div>
+                <h3 data-i18n="s1_t">EKRANLARINI YÜKLE</h3>
+                <p data-i18n="s1_d">PUBG Mobile lobi slot ekranını ya da maç sonu sonuç ekran görüntüsünü ekle. İstersen 10 saniyelik kaydırma videosunu doğrudan seç.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="step-item">
+            <div class="step-phone-mask" data-zoom-key="ui_ocr_dark" data-zoom-cap="Maç &amp; AI OCR — Çevrimdışı Normal OCR + Ücretsiz Gemini AI Vision">
+              <img src="ui_ocr_dark.webp" data-asset="ui_ocr_dark" alt="Yapay Zekâ OCR ekranı" />
+            </div>
+            <div class="step-copy">
+              <span class="step-big-num">2</span>
+              <div>
+                <h3 data-i18n="s2_t">YAPAY ZEKÂ VERİLERİ ÇIKARIR</h3>
+                <p data-i18n="s2_d">Sıralamaları, WWCD'leri ve killeri doğrudan ekranlardan okur; puan tablosunu, TOP 3 podyumu ve MVP'yi otomatik hesaplar. İstediğin değeri tek tıkla düzenlersin.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="step-item">
+            <div class="step-phone-mask" data-zoom-key="ui_studio_light" data-zoom-cap="Pro Stüdyo (108) — Scrim / PMGC Modu ve Dinamik Takım Uyarlama">
+              <img src="ui_studio_light.webp" data-asset="ui_studio_light" alt="Pro Stüdyo ekranı" />
+            </div>
+            <div class="step-copy">
+              <span class="step-big-num">3</span>
+              <div>
+                <h3 data-i18n="s3_t">TASARIMI YAYINLA</h3>
+                <p data-i18n="s3_d">108 HD Pro Stüdyo veya 226 Klasik şablondan birini seç, yayıncı logolarını konumlandır ve HD PNG, 9:16 Story, resmi PDF ya da Discord Webhook ile paylaş.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SIGNATURE "334+ TASARIM" OVERLAPPING 2-ROW MARQUEE -->
+    <section id="sablonlar" class="marquee-sec">
+      <div class="mega-banner-wrap">
+        <div class="mega-banner">
+          <span class="num">334+</span><span class="word" data-i18n="marq_word">TASARIM</span>
+        </div>
+      </div>
+
+      <div class="marquee-lanes">
+        <div class="marquee-lane">
+          <div class="marquee-track" id="marqueeRow1"></div>
+        </div>
+        <div class="marquee-lane">
+          <div class="marquee-track rev" id="marqueeRow2"></div>
+        </div>
+      </div>
+
+      <div class="marquee-cta-wrap">
+        <button type="button" class="btn-solid-accent" id="openGalleryBtn" data-i18n="marq_btn">334+ şablonun tüm örneklerine göz at</button>
+        <p class="marquee-subnote" data-i18n="marq_note">Tek uygulamada 108 HD Pro Stüdyo + 226 Klasik şablon. Ayrı tasarım uygulaması veya şablon başı ek ücret yok.</p>
+      </div>
+    </section>
+
+    <!-- "SENİN İÇİN HAZIRLADIKLARI" EDITORIAL BLOCKS -->
+    <section id="ozellikler" class="section">
+      <div class="container">
+        <h2 class="sec-title-lg" data-i18n="prep_title">SCRIM YÖNETİCİ PRO'NUN SENİN İÇİN HAZIRLADIKLARI</h2>
+        <p class="sec-lead" data-i18n="prep_desc">Scrim, lig ya da şampiyona için tüm tasarımlar ve skor motoru, tek uygulamadan.</p>
+
+        <div class="editorial-blocks">
+          <!-- Block 1: Stacked App Thumbs + AI OCR Copy -->
+          <div class="ed-ocr-row">
+            <div class="ed-stacked-thumbs">
+              <div class="ed-thumb" data-zoom-key="ui_ocr_dark" data-zoom-cap="Gemini AI Vision + 10 sn Video Tarama">
+                <img src="ui_ocr_dark.webp" data-asset="ui_ocr_dark" alt="AI OCR ekranı" />
+              </div>
+              <div class="ed-thumb" data-zoom-key="ui_lobby_dark" data-zoom-cap="Lobi Doluluğu ve Takım Kadro Hafızası">
+                <img src="ui_lobby_dark.webp" data-asset="ui_lobby_dark" alt="Lobi ekranı" />
+              </div>
+            </div>
+            <div>
+              <h3 class="ed-heading-sm">YAPAY ZEKÂ İLE EKRAN VE VİDEO OKUMA</h3>
+              <p class="ed-body">PUBG Mobile lobi slot ekranını ya da 10 saniyelik kaydırma skor videosunu seç. Uygulama hem internetsiz Çevrimdışı Normal OCR hem de kendi ücretsiz Gemini anahtarınla %99 doğrulukta çalışan AI Vision motorunu tek çatı altında sunar — ekstra AI aboneliği gerekmez.</p>
+            </div>
+          </div>
+
+          <!-- Block 2: Dual Side-by-Side Scoreboards + Interactive 8-Template Switcher -->
+          <div>
+            <div class="dual-posters">
+              <div class="dual-poster-card" data-zoom-key="tpl_prime_crimson" data-zoom-cap="Prime Scrims — Kızıl-Beyaz Liderlik Tablosu">
+                <img src="tpl_prime_crimson.webp" data-asset="tpl_prime_crimson" alt="Prime Scrims Tablosu" />
+              </div>
+              <div class="dual-poster-card" data-zoom-key="tpl_gold_bokeh" data-zoom-cap="Altın Bokeh — 16 Takım Genel Tablo">
+                <img src="tpl_gold_bokeh.webp" data-asset="tpl_gold_bokeh" alt="Altın Bokeh Genel Tablo" />
+              </div>
+            </div>
+
+            <div class="ed-kicker-block">
+              <div class="ed-vline"></div>
+              <div class="ed-kicker-txt">Her maçtan sonra</div>
+              <h3 class="ed-heading-sm">GÜNLÜK PUAN TABLOLARI VE PMGC / PMGO FORMATI</h3>
+              <p class="ed-body">8, 10, 12, 16, 18, 20 veya 25 takım fark etmez — satırlar lobine göre otomatik ölçeklenir. Aşağıdaki sekmelerden gerçek uygulamadan çıkan 8 farklı tablo stilini canlı incele.</p>
+            </div>
+
+            <div class="explorer-box" style="margin-top:22px;">
+              <div class="tab-strip" id="tableTabs">
+                <button type="button" class="tab-chip active" data-target="tpl_pmgo_finals" data-cap="PMGO Grand Finals — 16 Takım + Sağda MAÇ 1–6 Kazananları">PMGO Finals</button>
+                <button type="button" class="tab-chip" data-target="tpl_obeyley_prism" data-cap="OBEYLEY Prizma — Mor-Turkuaz 16 Takım Genel Tablo">OBEYLEY Prizma</button>
+                <button type="button" class="tab-chip" data-target="tpl_gold_bokeh" data-cap="Altın Bokeh — 16 Takım Genel Tablo">Altın Bokeh</button>
+                <button type="button" class="tab-chip" data-target="tpl_prime_crimson" data-cap="Prime Scrims — Kızıl-Beyaz Liderlik Tablosu">Prime Scrims</button>
+                <button type="button" class="tab-chip" data-target="tpl_pmgc_rose" data-cap="PMGC 16 — Pembe-Kızıl Genel Sıralama">PMGC 16</button>
+                <button type="button" class="tab-chip" data-target="tpl_crimson_maroon" data-cap="Koyu Bordo-Kızıl — 16 Takım Genel Sıralama">Bordo Kızıl</button>
+                <button type="button" class="tab-chip" data-target="tpl_pmgo_surv" data-cap="PMGO Survival Kupa — 6 Haritalı WWCD Şeridi">PMGO Kupa</button>
+                <button type="button" class="tab-chip" data-target="tpl_pmpl_light" data-cap="PMPL Açık Beton — Eğik Paralelkenar 16 Takım Sıralama">PMPL Beton</button>
+              </div>
+              <div class="explorer-stage">
+                <div class="explorer-img-wrap">
+                  <img id="explorerImg" src="tpl_pmgo_finals.webp" data-asset="tpl_pmgo_finals" data-zoom="PMGO Grand Finals — 16 Takım + Sağda MAÇ 1–6 Kazananları" alt="Canlı Tablo Önizleme" />
+                </div>
+                <div>
+                  <h4 class="display" style="font-size:28px;line-height:1.05;margin-bottom:10px;" id="explorerHeading">PMGO GRAND FINALS</h4>
+                  <p class="ed-body" style="margin-bottom:12px;">Scrim (TR) veya PMGC / PMGO (Global) modları arasında tek tıkla geçiş yap; 5 resmi yayıncı logosunu istediğin köşeye konumlandır ve saniyeler içinde HD PNG olarak kaydet.</p>
+                  <ul class="check-list">
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Otomatik <strong>MAÇ 1–6</strong> ve <strong>WWCD</strong> harita kazanan kutuları</span></li>
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span><strong>PUBG Mobile, KRAFTON, Level Infinite, Lightspeed, Tencent</strong> konumlandırma</span></li>
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Tek tık <strong>Gece Kapanışı:</strong> HD PNG + 9:16 Story + 4 sayfa resmi PDF rapor</span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Block 3: MVP & TOP 3 Podium -->
+          <div>
+            <div class="dual-posters">
+              <div class="dual-poster-card sq" data-zoom-key="mvp_purple_hud" data-zoom-cap="Elite Mor HUD MVP — NICK / LINE / KILL Otomatik Kartı">
+                <img src="mvp_purple_hud.webp" data-asset="mvp_purple_hud" alt="Elite Mor HUD MVP" />
+              </div>
+              <div class="dual-poster-card sq" data-zoom-key="tpl_top3_light" data-zoom-cap="PMPL Açık Beton — TOP 3 Podyum">
+                <img src="tpl_top3_light.webp" data-asset="tpl_top3_light" alt="TOP 3 Podyum" />
+              </div>
+            </div>
+
+            <div class="ed-kicker-block">
+              <div class="ed-vline"></div>
+              <div class="ed-kicker-txt">Final günü &amp; MVP</div>
+              <h3 class="ed-heading-sm">EN İYİ FRAGÇILAR, TOP 3 VE 9:16 HİKÂYE KARTLARI</h3>
+              <p class="ed-body">Maç verilerinden her lobinin MVP'si otomatik sıralanır. İster kare 1:1 gönderi, ister Instagram ve TikTok için 9:16 Altın Bokeh Story formatında oyuncu fotoğrafı veya takım logosuyla tek dokunuşta hazırla.</p>
+            </div>
+          </div>
+
+          <!-- Block 4: Siyah Cam & Beyaz Cam UI -->
+          <div>
+            <div class="dual-posters">
+              <div class="dual-poster-card phone" data-zoom-key="ui_lobby_dark" data-zoom-cap="Siyah Cam Modu — OBEYLEY Koyu Mor &amp; Turkuaz Lobi">
+                <img src="ui_lobby_dark.webp" data-asset="ui_lobby_dark" alt="Siyah Cam Arayüz" />
+              </div>
+              <div class="dual-poster-card phone" data-zoom-key="ui_lobby_light" data-zoom-cap="Beyaz Cam Modu — Kristal Aydınlık Lobi">
+                <img src="ui_lobby_light.webp" data-asset="ui_lobby_light" alt="Beyaz Cam Arayüz" />
+              </div>
+            </div>
+
+            <div class="ed-kicker-block">
+              <div class="ed-vline"></div>
+              <div class="ed-kicker-txt">OBEYLEY Cam Arayüz</div>
+              <h3 class="ed-heading-sm">SİYAH CAM, BEYAZ CAM VE DİNAMİK ANA EKRAN LOGOSU</h3>
+              <p class="ed-body">120 Hz akıcı cam arayüzde tek dokunuşla Siyah Cam veya Beyaz Cam moduna geç. Tema rengini değiştirdiğinde telefonunun ana ekranındaki uygulama ikonu da otomatik olarak seçtiğin renge bürünür.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="cap-grid">
+          <div class="cap-card">
+            <h4>3 CİHAZ ORTAK LOBİ</h4>
+            <p>Organizasyon paketinde 1 ana yönetici ve 2 yardımcı yönetici aynı turnuvayı farklı Android telefonlardan bulut eşitlemesiyle birlikte yönetir.</p>
+          </div>
+          <div class="cap-card">
+            <h4>DISCORD WEBHOOK &amp; OBS</h4>
+            <p>Canlı grup kurası çek, Spiker HUD ve OBS yayın skor çıktısı al, HD tablolarını tek tıkla doğrudan Discord sunucuna gönder.</p>
+          </div>
+          <div class="cap-card">
+            <h4>SADE İZİN &amp; BULUT YEDEK</h4>
+            <p>Yalnızca İnternet ve Bildirim izni kullanır; rehber, kamera, mikrofon veya konum istemez. Klan rehberin ve logoların bulutta güvende kalır.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OBEYLEY İLE TANIŞ -->
+    <section id="obeyley" class="section">
+      <div class="container">
+        <div class="founder-box">
+          <div class="founder-logo">
+            <img src="app_icon.webp" data-asset="app_icon" alt="OBEYLEY" />
+          </div>
+          <div>
+            <div class="ed-kicker-txt" style="margin-bottom:4px;">OBEYLEY ile tanış</div>
+            <h2 class="ed-heading-sm" style="margin-bottom:14px;">PUBG SCRIM'LERİ DÜZENLEMİŞ TEK BİR GELİŞTİRİCİ YAPIYOR.</h2>
+            <p>Scrim Yönetici Pro bizzat PUBG Mobile scrim'leri düzenlerken yaşadığım en büyük sorundan doğdu: maçlar bittikten sonra saatlerce elle puan hesabı yapmak, süslü klan isimlerini düzeltmek ve gece yarısına kadar Photoshop başında tablo hazırlamak.</p>
+            <p>Her organizasyon için tek tip sabit bir dosya yerine, her organizatörün kendi renklerine, logolarına ve takım sayısına göre saniyeler içinde yayın kalitesinde çıktı alabileceği eksiksiz bir mobil stüdyo kurdum. Bugün 108 HD Pro Stüdyo, 226 Klasik şablon, 10 sn Video OCR ve ücretsiz Gemini AI entegrasyonuyla her güncelleme doğrudan organizatörlerden gelen fikirlerle büyüyor.</p>
+            <div class="store-row" style="margin-top:18px;margin-bottom:0;">
+              <a href="#" id="founderWaBtn" class="store-badge accent-outline" target="_blank" rel="noopener" style="min-width:auto;">
+                <span class="sb-txt"><span class="sb-sub">Doğrudan İletişim</span><span class="sb-main">WhatsApp Destek</span></span>
+              </a>
+              <a href="#paketler" class="btn-solid-accent" style="padding:12px 22px;">Lisans Paketlerini Gör</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="paketler" class="section">
+      <div class="container">
+        <h2 class="sec-title-lg" data-i18n="price_title">İHTİYACINA GÖRE BAŞLA. TÜM ÖZELLİKLER AÇIK.</h2>
+        <p class="sec-lead" data-i18n="price_desc">40 ₺'lik tek scrim denemesinden 90 günlük sezona kadar her pakette 334+ şablon, Video OCR ve AI Stüdyo eksiksiz açılır.</p>
+
+        <div class="trust-note">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          <span>İtemSatış 7/24 otomatik teslimat • Lisans süreniz yalnızca kodu uygulamaya girdiğiniz saniyede başlar.</span>
+        </div>
+
+        <div class="tab-strip" id="filterBar" role="tablist">
+          <button type="button" class="tab-chip active" data-cat="all">Tümü (7)</button>
+          <button type="button" class="tab-chip" data-cat="short">Kısa Süreli</button>
+          <button type="button" class="tab-chip" data-cat="pro">Lig ve Sezon</button>
+          <button type="button" class="tab-chip" data-cat="team">Ekip (3 Cihaz)</button>
+        </div>
+
+        <div class="pricing-grid" id="pricingGrid"></div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="sss" class="section">
+      <div class="container">
+        <h2 class="sec-title-lg" data-i18n="faq_title">SIK SORULAN SORULAR</h2>
+
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary><span>Yapay zekâ skor okuma (AI OCR) için ekstra ücret ödüyor muyum?</span><span class="plus">+</span></summary>
+            <p>Hayır. Uygulama içinde hem internetsiz Çevrimdışı Normal OCR hem de Google AI Studio üzerinden tamamen ücretsiz alınan kendi Gemini API anahtarınla çalışan AI Vision motoru dahildir. Kart eklemediğin sürece ekstra hiçbir ücret ödemezsin.</p>
+          </details>
+          <details class="faq-item">
+            <summary><span>Lisans süresi satın aldığım anda mı başlar?</span><span class="plus">+</span></summary>
+            <p>Hayır. İtemSatış üzerinden 7/24 otomatik teslim edilen aktivasyon kodunu istediğin gün kullanabilirsin. Süren yalnızca kodu uygulamanın aktivasyon ekranına girip onayladığın saniyede başlar.</p>
+          </details>
+          <details class="faq-item">
+            <summary><span>Android kurulum uyarısı çıkarsa ne yapmalıyım?</span><span class="plus">+</span></summary>
+            <p>Google Play dışından indirilen tüm Android uygulamalarında sistem standart güvenlik uyarısı gösterir. "Bu kaynaktan izin ver" seçeneğini onaylayarak kurulumu tamamlayabilirsin. Uygulama yalnızca İnternet ve Bildirim izni kullanır; rehber, kamera, mikrofon veya konum izni istemez.</p>
+          </details>
+          <details class="faq-item">
+            <summary><span>Yeni güncellemeler geldiğinde kayıtlı lobilerim silinir mi?</span><span class="plus">+</span></summary>
+            <p>Hayır. Yeni bir sürüm yayınlandığında APK dosyasını doğrudan mevcut uygulamanın üzerine kurabilirsin; kayıtlı takımların, takım logoların, klan rehberin ve lobilerin aynen korunur.</p>
+          </details>
+          <details class="faq-item">
+            <summary><span>Organizasyon 3 Cihaz paketi nasıl çalışır?</span><span class="plus">+</span></summary>
+            <p>Tek bir organizasyon kodu 3 ayrı Android cihazda (1 ana yönetici + 2 yardımcı yönetici) aktif olur. Ortak Lobi özelliği sayesinde aynı turnuvayı ekip halinde eşzamanlı yönetebilirsiniz.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final-cta">
+      <div class="container">
+        <h2 class="sec-title-lg" style="margin-bottom:14px;">BİR SONRAKİ TURNUVANI<br /><span style="color:var(--accent);">SCRIM YÖNETİCİ PRO</span> İLE YÖNET.</h2>
+        <p class="sec-lead" style="margin-bottom:26px;">Android'de ücretsiz indir, 40 ₺'lik tek scrim paketiyle gerçek turnuvada dene veya aylık lisansla tüm geceleri tek telefona indir.</p>
+        <div class="store-row" style="margin-bottom:0;">
+          <a href="#" id="ctaDownloadBtn" class="store-badge">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span class="sb-txt"><span class="sb-sub">Son Sürüm APK</span><span class="sb-main">Android'den Edin</span></span>
+          </a>
+          <a href="#" id="supportWaBtn" class="store-badge accent-outline" target="_blank" rel="noopener">
+            <span class="sb-txt"><span class="sb-sub">7/24 Yardım</span><span class="sb-main">WhatsApp Destek</span></span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- MULTI-COLUMN FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-bio">
+          <a href="#top" class="brand">
+            <span class="brand-icon"><img src="app_icon.webp" data-asset="app_icon" alt="Scrim Yönetici Pro" /></span>
+            <span class="brand-word" style="font-size:19px;">SCRIM YÖNETİCİ PRO</span>
+          </a>
+          <p>PUBG Mobile maç ekran görüntülerinden ve videolarından saniyeler içinde yayın kalitesinde turnuva görselleri. OBEYLEY tarafından geliştirildi.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Ürün</h4>
+          <ul>
+            <li><a href="#nasil-calisir">Nasıl çalışır</a></li>
+            <li><a href="#sablonlar">334+ Tasarım</a></li>
+            <li><a href="#ozellikler">Özellikler</a></li>
+            <li><a href="#obeyley">OBEYLEY</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>İndir &amp; Lisans</h4>
+          <ul>
+            <li><a href="#" id="footerDownloadBtn">Android APK İndir</a></li>
+            <li><a href="#paketler">Fiyatlar</a></li>
+            <li><a href="#sss">SSS</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Bağlan</h4>
+          <ul>
+            <li><a href="#" id="footerWaBtn" target="_blank" rel="noopener">WhatsApp Destek</a></li>
+            <li><button type="button" data-legal="privacy">Gizlilik Politikası</button></li>
+            <li><button type="button" data-legal="terms">Kullanım Koşulları</button></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Scrim Yönetici Pro. Tüm hakları saklıdır. Yapımcı: OBEYLEY</div>
+        <div>Bağımsız turnuva aracıdır; Krafton veya PUBG Mobile ile resmi ortaklık iddiasında bulunmaz.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FULL TEMPLATE GALLERY MODAL -->
+  <div class="modal-backdrop" id="galleryModal" aria-hidden="true">
+    <div class="modal-card wide" role="dialog" aria-modal="true">
+      <div class="modal-head">
+        <h3 class="display" style="font-size:26px;">GERÇEK v30.9 ŞABLON ÖRNEKLERİ</h3>
+        <button type="button" class="drawer-close" id="galleryCloseBtn" aria-label="Kapat">×</button>
+      </div>
+      <div class="tab-strip" id="galFilterBar">
+        <button type="button" class="tab-chip active" data-gcat="all">Tümü (11)</button>
+        <button type="button" class="tab-chip" data-gcat="table">Puan Tabloları (8)</button>
+        <button type="button" class="tab-chip" data-gcat="mvp">MVP &amp; TOP 3 (3)</button>
+      </div>
+      <div class="gallery-grid" id="galleryGrid"></div>
+    </div>
+  </div>
+
+  <!-- LEGAL MODAL -->
+  <div class="modal-backdrop" id="legalModal" aria-hidden="true">
+    <div class="modal-card" role="dialog" aria-modal="true">
+      <div class="modal-head">
+        <h3 id="legalTitle" style="font-size:18px;font-weight:800;">Gizlilik Politikası</h3>
+        <button type="button" class="drawer-close" id="legalCloseBtn" aria-label="Kapat">×</button>
+      </div>
+      <div class="modal-body" id="legalBody"></div>
+    </div>
+  </div>
+
+  <!-- LIGHTBOX -->
+  <div class="modal-backdrop" id="lightboxModal" aria-hidden="true">
+    <button type="button" class="lb-close" id="lightboxCloseBtn" aria-label="Kapat">×</button>
+    <div class="lb-wrap">
+      <img id="lightboxImg" src="" alt="Önizleme" />
+      <div class="lb-cap" id="lightboxCap"></div>
+    </div>
+  </div>
+
+  <script>
+    const ASSETS = {
+      "ui_ocr_dark": "ui_ocr_dark.webp",
+      "ui_lobby_dark": "ui_lobby_dark.webp",
+      "ui_lobby_light": "ui_lobby_light.webp",
+      "ui_studio_light": "ui_studio_light.webp",
+      "mvp_purple_hud": "mvp_purple_hud.webp",
+      "tpl_pmgo_surv": "tpl_pmgo_surv.webp",
+      "tpl_top3_light": "tpl_top3_light.webp",
+      "tpl_pmpl_light": "tpl_pmpl_light.webp",
+      "tpl_pmgo_finals": "tpl_pmgo_finals.webp",
+      "mvp_gold_story": "mvp_gold_story.webp",
+      "tpl_obeyley_prism": "tpl_obeyley_prism.webp",
+      "tpl_gold_bokeh": "tpl_gold_bokeh.webp",
+      "tpl_prime_crimson": "tpl_prime_crimson.webp",
+      "tpl_pmgc_rose": "tpl_pmgc_rose.webp",
+      "tpl_crimson_maroon": "tpl_crimson_maroon.webp",
+      "app_icon": "app_icon.webp"
+};
+
+    document.querySelectorAll("img[data-asset]").forEach(img => {
+      const s = ASSETS[img.dataset.asset];
+      if (s) img.src = s;
+    });
+
+    const CONFIG = {
+      githubOwner: "OBeyley",
+      githubRepo: "scrim-indir",
+      whatsappNumber: "6282343876036",
+      whatsappMessage: "Merhaba, Scrim Yönetici Pro hakkında bilgi almak istiyorum."
+    };
+
+    const CHECK_SVG = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>';
+
+    const ALL_TEMPLATES = [
+      { key: "tpl_pmgo_finals",    cat: "table", pill: "Pro Stüdyo", title: "PMGO Grand Finals (6 Maçlı)" },
+      { key: "tpl_obeyley_prism",  cat: "table", pill: "OBEYLEY",    title: "OBEYLEY Prizma Mor-Turkuaz" },
+      { key: "tpl_prime_crimson",  cat: "table", pill: "Pro Stüdyo", title: "Prime Scrims Kızıl-Beyaz" },
+      { key: "tpl_gold_bokeh",     cat: "table", pill: "Pro Stüdyo", title: "Altın Bokeh Genel Tablo" },
+      { key: "tpl_pmgc_rose",      cat: "table", pill: "PMGC 16",    title: "PMGC 16 Pembe-Kızıl" },
+      { key: "tpl_crimson_maroon", cat: "table", pill: "Pro Stüdyo", title: "Koyu Bordo-Kızıl Sıralama" },
+      { key: "tpl_pmgo_surv",      cat: "table", pill: "WWCD Kupa",  title: "PMGO Survival Zümrüt Kupa" },
+      { key: "tpl_pmpl_light",     cat: "table", pill: "PMPL Beton", title: "PMPL Açık Beton Eğik" },
+      { key: "mvp_purple_hud",     cat: "mvp",   pill: "MVP",        title: "Elite Mor HUD MVP" },
+      { key: "tpl_top3_light",     cat: "mvp",   pill: "TOP 3",      title: "PMPL Açık Beton TOP 3" },
+      { key: "mvp_gold_story",     cat: "mvp",   pill: "9:16 Story", title: "Altın Bokeh Story MVP" }
+    ];
+
+    // 1. TWO-ROW COUNTER-SCROLLING MARQUEE
+    function renderMarquee(targetId, items) {
+      const htmlStr = items.map(t => `
+        <div class="tpl-poster" data-zoom-key="${t.key}" data-zoom-cap="${t.title}">
+          <img src="${ASSETS[t.key]}" alt="${t.title}" />
+          <span class="tpl-pill">${t.pill}</span>
+        </div>
+      `).join("");
+      document.getElementById(targetId).innerHTML = htmlStr + htmlStr;
+    }
+    renderMarquee("marqueeRow1", ALL_TEMPLATES.slice(0, 6));
+    renderMarquee("marqueeRow2", [
+      ALL_TEMPLATES[6], ALL_TEMPLATES[7], ALL_TEMPLATES[8], ALL_TEMPLATES[9], ALL_TEMPLATES[10], ALL_TEMPLATES[2]
+    ]);
+
+    // 2. FULL GALLERY MODAL
+    const galleryModal = document.getElementById("galleryModal");
+    const galleryGrid = document.getElementById("galleryGrid");
+    function renderGallery(cat) {
+      const list = cat === "all" ? ALL_TEMPLATES : ALL_TEMPLATES.filter(t => t.cat === cat);
+      galleryGrid.innerHTML = list.map(t => `
+        <div class="gal-card" data-zoom-key="${t.key}" data-zoom-cap="${t.title}">
+          <span class="tpl-pill">${t.pill}</span>
+          <img src="${ASSETS[t.key]}" alt="${t.title}" />
+          <div class="gal-cap">${t.title}</div>
+        </div>
+      `).join("");
+    }
+    renderGallery("all");
+
+    function openGallery() {
+      setDrawer(false);
+      galleryModal.classList.add("open");
+      galleryModal.setAttribute("aria-hidden", "false");
+    }
+    function closeGallery() {
+      galleryModal.classList.remove("open");
+      galleryModal.setAttribute("aria-hidden", "true");
+    }
+    document.getElementById("openGalleryBtn").addEventListener("click", openGallery);
+    document.getElementById("drawerGalleryBtn").addEventListener("click", openGallery);
+    document.getElementById("galleryCloseBtn").addEventListener("click", closeGallery);
+    galleryModal.addEventListener("click", (e) => { if (e.target === galleryModal) closeGallery(); });
+    document.getElementById("galFilterBar").addEventListener("click", (e) => {
+      const btn = e.target.closest(".tab-chip");
+      if (!btn) return;
+      document.querySelectorAll("#galFilterBar .tab-chip").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      renderGallery(btn.dataset.gcat);
+    });
+
+    // 3. INTERACTIVE 8-SCOREBOARD EXPLORER
+    const tableTabs = document.getElementById("tableTabs");
+    const explorerImg = document.getElementById("explorerImg");
+    const explorerHeading = document.getElementById("explorerHeading");
+    tableTabs.addEventListener("click", (e) => {
+      const btn = e.target.closest(".tab-chip");
+      if (!btn) return;
+      tableTabs.querySelectorAll(".tab-chip").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      const k = btn.dataset.target;
+      if (ASSETS[k]) {
+        explorerImg.src = ASSETS[k];
+        explorerImg.dataset.zoom = btn.dataset.cap || "";
+        explorerHeading.textContent = btn.textContent.toUpperCase();
+      }
+    });
+
+    // 4. TOP-RIGHT 3-LINE DRAWER + LIGHT/DARK MODE + ACCENT + TR/EN LANGUAGE
+    const menuBtn = document.getElementById("menuBtn");
+    const navDrawer = document.getElementById("navDrawer");
+    const drawerBackdrop = document.getElementById("drawerBackdrop");
+
+    function setDrawer(open) {
+      navDrawer.classList.toggle("open", open);
+      drawerBackdrop.classList.toggle("open", open);
+      menuBtn.setAttribute("aria-expanded", String(open));
+      navDrawer.setAttribute("aria-hidden", String(!open));
+      document.body.style.overflow = open ? "hidden" : "";
+    }
+    menuBtn.addEventListener("click", () => setDrawer(!navDrawer.classList.contains("open")));
+    document.getElementById("drawerClose").addEventListener("click", () => setDrawer(false));
+    drawerBackdrop.addEventListener("click", () => setDrawer(false));
+    document.querySelectorAll("[data-close-drawer]").forEach(el => el.addEventListener("click", () => setDrawer(false)));
+
+    // Light / Dark Mode Toggle
+    const modeBtn = document.getElementById("modeBtn");
+    const moonIcon = document.getElementById("moonIcon");
+    const sunIcon = document.getElementById("sunIcon");
+    function applyMode(m) {
+      document.documentElement.setAttribute("data-mode", m);
+      moonIcon.style.display = m === "light" ? "block" : "none";
+      sunIcon.style.display = m === "dark" ? "block" : "none";
+      const meta = document.querySelector('meta[name="theme-color"]');
+      if (meta) meta.content = m === "dark" ? "#0B0A11" : "#FAF6F4";
+      localStorage.setItem("scrim_mode_v3", m);
+    }
+    applyMode(localStorage.getItem("scrim_mode_v3") || "light");
+    modeBtn.addEventListener("click", () => {
+      const cur = document.documentElement.getAttribute("data-mode");
+      applyMode(cur === "dark" ? "light" : "dark");
+    });
+
+    // Accent Switcher inside Drawer
+    function applyAccent(a) {
+      document.documentElement.setAttribute("data-accent", a);
+      document.querySelectorAll("[data-set-accent]").forEach(b => b.classList.toggle("active", b.dataset.setAccent === a));
+      localStorage.setItem("scrim_accent_v3", a);
+    }
+    applyAccent(localStorage.getItem("scrim_accent_v3") || "obeyley");
+    document.getElementById("accentPicker").addEventListener("click", (e) => {
+      const btn = e.target.closest("[data-set-accent]");
+      if (btn) applyAccent(btn.dataset.setAccent);
+    });
+
+    // Globe Language Dropdown (TR / EN)
+    const I18N = {
+      tr: {
+        heroHtml: 'MAÇ BİTSİN.<br />TABLO SANİYELERDE<br /><span class="accent-line">YAYINDA OLSUN.</span>',
+        nav_how: "Nasıl çalışır", nav_tpl: "Tasarımlar", nav_feat: "Özellikler", nav_price: "Fiyatlar", nav_faq: "SSS",
+        dr_sections: "Bölümler", dr_tpl: "334+ Tasarım Vitrini", dr_accent: "Vurgu Rengi", dr_links: "Bağlantılar", dr_gallery: "Tüm Şablon Örnekleri",
+        btn_dl: "Android için İndir", btn_dl_short: "Android'den Edin", btn_plans: "Lisans Paketleri",
+        hero_desc: "PUBG Mobile scrim ve turnuva organizatörleri için yapay zekâ turnuva araç seti. Lobi veya maç sonu ekranını yükle; Scrim Yönetici Pro sıralamaları ve killeri okur, ardından senin için PMGO, PMGC, PMPL puan tablosunu, MVP'yi, TOP 3 podyumu ve 6 maç kazananlarını hazırlar.",
+        st_tpl: "HD Pro & Klasik", st_teams: "Dinamik Takım", st_team: "Ortak Lobi",
+        lbl_screens: "Uygulama ekranların", lbl_outputs: "Scrim Yönetici Pro'nun bunlardan yaptıkları",
+        how_title: "YAYINA HAZIR BİR SETE ÜÇ DOKUNUŞ",
+        how_desc: "Elektronik tabloya ya da Photoshop'a ihtiyacın yok, ekran görüntülerinden sayı da kopyalamazsın. Görüntüleri yükle, Scrim Yönetici Pro tasarımları hazırlasın.",
+        s1_t: "EKRANLARINI YÜKLE", s1_d: "PUBG Mobile lobi slot ekranını ya da maç sonu sonuç ekran görüntüsünü ekle. İstersen 10 saniyelik kaydırma videosunu doğrudan seç.",
+        s2_t: "YAPAY ZEKÂ VERİLERİ ÇIKARIR", s2_d: "Sıralamaları, WWCD'leri ve killeri doğrudan ekranlardan okur; puan tablosunu, TOP 3 podyumu ve MVP'yi otomatik hesaplar. İstediğin değeri tek tıkla düzenlersin.",
+        s3_t: "TASARIMI YAYINLA", s3_d: "108 HD Pro Stüdyo veya 226 Klasik şablondan birini seç, yayıncı logolarını konumlandır ve HD PNG, 9:16 Story, resmi PDF ya da Discord Webhook ile paylaş.",
+        marq_word: "TASARIM", marq_btn: "334+ şablonun tüm örneklerine göz at",
+        marq_note: "Tek uygulamada 108 HD Pro Stüdyo + 226 Klasik şablon. Ayrı tasarım uygulaması veya şablon başı ek ücret yok.",
+        prep_title: "SCRIM YÖNETİCİ PRO'NUN SENİN İÇİN HAZIRLADIKLARI",
+        prep_desc: "Scrim, lig ya da şampiyona için tüm tasarımlar ve skor motoru, tek uygulamadan.",
+        price_title: "İHTİYACINA GÖRE BAŞLA. TÜM ÖZELLİKLER AÇIK.",
+        price_desc: "40 ₺'lik tek scrim denemesinden 90 günlük sezona kadar her pakette 334+ şablon, Video OCR ve AI Stüdyo eksiksiz açılır.",
+        faq_title: "SIK SORULAN SORULAR"
+      },
+      en: {
+        heroHtml: 'MATCH ENDS.<br />STANDINGS LIVE<br /><span class="accent-line">IN SECONDS.</span>',
+        nav_how: "How it works", nav_tpl: "Templates", nav_feat: "Features", nav_price: "Pricing", nav_faq: "FAQ",
+        dr_sections: "Sections", dr_tpl: "334+ Template Gallery", dr_accent: "Accent Color", dr_links: "Links", dr_gallery: "Browse All Previews",
+        btn_dl: "Download for Android", btn_dl_short: "Get Android APK", btn_plans: "License Plans",
+        hero_desc: "AI tournament toolkit for PUBG Mobile scrim and esports organizers. Upload lobby or match result screens; Scrim Yönetici Pro extracts placements &amp; kills and generates PMGO, PMGC, PMPL standings, MVP, and TOP 3 graphics in seconds.",
+        st_tpl: "HD Pro & Classic", st_teams: "Dynamic Teams", st_team: "Shared Lobby",
+        lbl_screens: "Your app screens", lbl_outputs: "What Scrim Yönetici Pro generates",
+        how_title: "THREE TAPS TO A BROADCAST-READY SET",
+        how_desc: "No spreadsheets, no Photoshop, no copying numbers manually. Drop your screenshots or 10s scroll video and export HD designs immediately.",
+        s1_t: "UPLOAD SCREENS", s1_d: "Add your PUBG Mobile lobby slot or match result screenshots — or pick a 10-second scrolling scoreboard video directly.",
+        s2_t: "AI EXTRACTS SCORES", s2_d: "Reads placements, WWCDs, and kills with offline OCR or your own free Gemini AI Vision key. Edit any number in one tap.",
+        s3_t: "PUBLISH IN HD", s3_d: "Pick from 108 HD Pro Studio or 226 Classic templates, place publisher logos, and share as HD PNG, 9:16 Story, PDF, or Discord Webhook.",
+        marq_word: "DESIGNS", marq_btn: "Browse all 334+ template previews",
+        marq_note: "108 HD Pro Studio + 226 Classic templates in one app — no extra studio app or per-template fees.",
+        prep_title: "WHAT SCRIM YÖNETİCİ PRO BUILDS FOR YOU",
+        prep_desc: "Every graphic for daily scrims, leagues, or championships from a single Android app.",
+        price_title: "START YOUR WAY. EVERY FEATURE INCLUDED.",
+        price_desc: "From a single-scrim 3-hour trial to 90-day seasonal licenses — all 334+ templates, Video OCR, and AI Studio unlock completely.",
+        faq_title: "FREQUENTLY ASKED QUESTIONS"
+      }
+    };
+
+    const langBtn = document.getElementById("langBtn");
+    const langPopover = document.getElementById("langPopover");
+    langBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const open = !langPopover.classList.contains("open");
+      langPopover.classList.toggle("open", open);
+      langBtn.setAttribute("aria-expanded", String(open));
+    });
+    document.addEventListener("click", () => {
+      langPopover.classList.remove("open");
+      langBtn.setAttribute("aria-expanded", "false");
+    });
+    langPopover.addEventListener("click", (e) => {
+      const opt = e.target.closest("[data-lang]");
+      if (!opt) return;
+      const l = opt.dataset.lang;
+      const dict = I18N[l] || I18N.tr;
+      document.documentElement.lang = l;
+      document.getElementById("heroTitle").innerHTML = dict.heroHtml;
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        const k = el.dataset.i18n;
+        if (dict[k]) el.textContent = dict[k];
+      });
+      langPopover.querySelectorAll("[data-lang]").forEach(b => b.classList.toggle("active", b.dataset.lang === l));
+      langPopover.classList.remove("open");
+    });
+
+    // 5. EXACT 7 İTEMSATIŞ PLANS
+    const PLANS = [
+      {
+        code: "3H", cat: "short", tag: "Deneme", unit: "Tek Scrim", name: "3 Saatlik Lisans", price: 40,
+        desc: "Tek akşamlık özel scrimler veya uygulamayı gerçek turnuvada denemek için.",
+        url: "https://www.itemsatis.com/is-programlari/scrim-yonetici-pro-3-saatlik-tek-scrim-lisansi-6078686.html",
+        highlights: [
+          "3 saat boyunca 108 Pro + 226 Klasik tüm modüller açık",
+          "Lobi SS/Video OCR, yapay zekâ skor okuma ve tek tık kapanış",
+          "Süre kodu uygulamaya girdiğiniz anda başlar"
+        ]
+      },
+      {
+        code: "6H", cat: "short", tag: "Gece Paketi", unit: "Çift Lobi", name: "6 Saatlik Lisans", price: 60,
+        desc: "Uzun 4-6 maçlık turnuva akşamları ve arka arkaya çift lobi yönetimi için.",
+        url: "https://www.itemsatis.com/is-programlari/scrim-yonetici-pro-6-saatlik-gece-paketi-6078717.html",
+        highlights: [
+          "Akşam boyu kesintisiz 6 saat tam PRO erişim",
+          "10 sn Video OCR, Gemini AI Vision ve AI Stüdyo",
+          "4 sayfa resmi PDF rapor ve 9:16 Story MVP paketi"
+        ]
+      },
+      {
+        code: "24H", cat: "short", tag: "Günlük", unit: "24 Saat", name: "Günlük Lisans", price: 80,
+        desc: "Hafta sonu kupaları, eleme ve final günleri ile çoklu grup etkinlikleri için.",
+        url: "https://www.itemsatis.com/is-programlari/scrim-yonetici-pro-24-saatlik-gunluk-lisans-6078950.html",
+        highlights: [
+          "24 saat boyunca sınırsız lobi ve HD yayın tablosu",
+          "PMGO / PMPL şablonları, canlı kura ve Spiker HUD",
+          "OBS canlı yayın çıktısı ve Discord HD Webhook"
+        ]
+      },
+      {
+        code: "7D", cat: "pro", tag: "%68 İndirim", unit: "Günlük ~25 ₺", name: "Haftalık Lisans", price: 180,
+        desc: "Haftalık ligler ve her akşam düzenli lobi açan organizatörler için.",
+        url: "https://www.itemsatis.com/is-programlari/scrim-yonetici-pro-7-gunluk-haftalik-lisans-6078980.html",
+        highlights: [
+          "Günlük pakete göre %68 maliyet avantajı",
+          "Klan rehberi ve bulut yedekleme ile kadro eşleşme",
+          "334+ şablon, 5 yayıncı logosu konumlandırma dahil"
+        ]
+      },
+      {
+        code: "30D", cat: "pro", featured: true, tag: "Önerimiz", unit: "Günlük ~11,6 ₺", name: "Aylık Lisans (30 Gün)", price: 350,
+        desc: "Tüm ay boyunca tek telefondan eksiksiz turnuva ve tasarım yönetimi.",
+        url: "https://www.itemsatis.com/is-programlari/scrim-yonetici-pro-30-gunluk-aylik-pro-lisans-6079008.html",
+        highlights: [
+          "30 gün boyunca tüm PRO özelliklere sınırsız erişim",
+          "Yayınlanan tüm güncellemeler ve yeni Pro şablonlar dahil",
+          "Arkadaş davet koduyla +3 gün ek süre avantajı"
+        ]
+      },
+      {
+        code: "ORG", cat: "team", tag: "3 Cihaz Ekip", unit: "Cihaz başı ~216 ₺", name: "Organizasyon (30 Gün)", price: 650,
+        desc: "1 ana yönetici ve 2 yardımcı yönetici için ortak bulut lobi yönetimi.",
+        url: "https://www.itemsatis.com/is-programlari/scrim-yonetici-pro-organizasyon-30-gun-3-chz-6079036.html",
+        highlights: [
+          "3 ayrı Android cihaz için 30 günlük tam PRO lisans",
+          "Ortak Lobi ile eşzamanlı çoklu admin yönetimi",
+          "4 sayfalık sponsor PDF raporu ve Spiker HUD"
+        ]
+      },
+      {
+        code: "90D", cat: "pro", tag: "%88 İndirim", unit: "Günlük ~9,4 ₺", name: "3 Aylık Sezon (90 Gün)", price: 850,
+        desc: "Tüm sezonu en düşük günlük maliyetle tek seferde kapatın.",
+        url: "https://www.itemsatis.com/is-programlari/3-aylik-sezon-paketi-90-gun-88-indirimli-6079072.html",
+        highlights: [
+          "Günlük ~9,4 ₺ ile en yüksek sezon tasarrufu",
+          "90 gün boyunca çıkacak tüm yeni özellikler dahil",
+          "Kesintisiz bulut yedekleme, klan rehberi ve AI OCR"
+        ]
+      }
+    ];
+
+    const pricingGrid = document.getElementById("pricingGrid");
+    function renderPlans(cat) {
+      const list = cat === "all" ? PLANS : PLANS.filter(p => p.cat === cat);
+      pricingGrid.innerHTML = list.map(p => `
+        <article class="plan-card ${p.featured ? 'featured' : ''}">
+          <div class="plan-top">
+            <span class="plan-tag">${p.tag}</span>
+            <span class="plan-unit">${p.unit}</span>
+          </div>
+          <h3 class="plan-name">${p.name}</h3>
+          <div class="plan-price"><strong>${p.price}</strong><span>₺</span></div>
+          <p class="plan-desc">${p.desc}</p>
+          <div class="plan-hr"></div>
+          <ul class="plan-features">
+            ${p.highlights.map(h => `<li>${CHECK_SVG}<span>${h}</span></li>`).join("")}
+          </ul>
+          <a href="${p.url}" class="plan-btn" target="_blank" rel="noopener">İtemSatış'ta Satın Al</a>
+        </article>
+      `).join("");
+    }
+    renderPlans("all");
+
+    document.getElementById("filterBar").addEventListener("click", (e) => {
+      const btn = e.target.closest(".tab-chip");
+      if (!btn) return;
+      document.querySelectorAll("#filterBar .tab-chip").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      renderPlans(btn.dataset.cat);
+    });
+
+    // 6. WHATSAPP & GITHUB AUTO LATEST APK
+    const waUrl = `https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent(CONFIG.whatsappMessage)}`;
+    ["drawerWaBtn", "founderWaBtn", "supportWaBtn", "footerWaBtn"].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.href = waUrl;
+    });
+
+    const detectedRepo = (() => {
+      const host = (window.location.hostname || "").toLowerCase();
+      const seg = (window.location.pathname || "/").split("/").filter(Boolean)[0];
+      if (host.endsWith(".github.io")) return seg || `${CONFIG.githubOwner}.github.io`;
+      return CONFIG.githubRepo;
+    })();
+    const releasesFallback = `https://github.com/${CONFIG.githubOwner}/${detectedRepo}/releases/latest`;
+    const downloadBtns = ["drawerDownloadBtn", "heroDownloadBtn", "ctaDownloadBtn", "footerDownloadBtn"]
+      .map(id => document.getElementById(id)).filter(Boolean);
+    downloadBtns.forEach(b => b.href = releasesFallback);
+
+    async function syncApkLink() {
+      const candidates = detectedRepo === CONFIG.githubRepo ? [detectedRepo] : [detectedRepo, CONFIG.githubRepo];
+      for (const repo of candidates) {
+        try {
+          const res = await fetch(`https://api.github.com/repos/${CONFIG.githubOwner}/${repo}/releases/latest`, {
+            headers: { "Accept": "application/vnd.github+json" }
+          });
+          if (!res.ok) continue;
+          const data = await res.json();
+          const apk = (data.assets || []).find(a => a.name && a.name.toLowerCase().endsWith(".apk"));
+          if (apk && apk.browser_download_url) {
+            downloadBtns.forEach(b => b.href = apk.browser_download_url);
+            if (apk.size) {
+              const mb = (apk.size / (1024 * 1024)).toFixed(1);
+              document.getElementById("heroApkSub").textContent = `Ücretsiz APK • ${mb} MB`;
+            }
+            return;
+          }
+        } catch (_) {}
+      }
+    }
+    syncApkLink();
+
+    // 7. LIGHTBOX & LEGAL MODALS
+    const lbModal = document.getElementById("lightboxModal");
+    const lbImg = document.getElementById("lightboxImg");
+    const lbCap = document.getElementById("lightboxCap");
+    function openLightbox(src, cap) {
+      lbImg.src = src;
+      lbCap.textContent = cap || "";
+      lbModal.classList.add("open");
+      lbModal.setAttribute("aria-hidden", "false");
+    }
+    function closeLightbox() {
+      lbModal.classList.remove("open");
+      lbModal.setAttribute("aria-hidden", "true");
+    }
+    document.addEventListener("click", (e) => {
+      const zc = e.target.closest("[data-zoom-key]");
+      if (zc) { openLightbox(ASSETS[zc.dataset.zoomKey], zc.dataset.zoomCap); return; }
+      const zi = e.target.closest("img[data-zoom]");
+      if (zi && zi.src) openLightbox(zi.src, zi.dataset.zoom);
+    });
+    document.getElementById("lightboxCloseBtn").addEventListener("click", closeLightbox);
+    lbModal.addEventListener("click", (e) => { if (e.target === lbModal) closeLightbox(); });
+
+    const LEGAL_DOCS = {
+      privacy: {
+        title: "Gizlilik Politikası",
+        body: `
+          <h4>1. İzin Kullanımı</h4>
+          <p>Scrim Yönetici Pro yalnızca İnternet ve Bildirim izinlerini kullanır. Rehber, SMS, Kamera, Mikrofon, Konum veya Erişilebilirlik servislerine erişmez.</p>
+          <h4>2. Hesap ve Bulut Verileri</h4>
+          <p>Hesabınızla giriş yaptığınızda kimlik doğrulama ve bulut lobi yedeklemeleri şifreli bulut altyapısında saklanır. Aktif lisans doğrulaması için anonim cihaz kimliği kullanılır.</p>
+          <h4>3. Görsel, Video ve API Anahtarı</h4>
+          <p>Skor okuma için seçtiğiniz ekran görüntüleri ve videolar yalnızca puan tablosu oluşturmak amacıyla işlenir. İsteğe bağlı girdiğiniz Gemini API anahtarı yalnızca kendi cihazınızda saklanır.</p>
+          <h4>4. Veri Silme Talebi</h4>
+          <p>Hesabınızın ve bulut yedeklerinizin silinmesini dilediğiniz zaman WhatsApp destek hattımız üzerinden talep edebilirsiniz.</p>
+        `
+      },
+      terms: {
+        title: "Kullanım Koşulları",
+        body: `
+          <h4>1. Lisans Kullanımı</h4>
+          <p>İtemSatış üzerinden alınan aktivasyon kodları tek cihazda (Organizasyon paketinde 3 cihazda) geçerlidir. Süre, kodun uygulamaya girilip onaylandığı anda başlar.</p>
+          <h4>2. Güncellemeler</h4>
+          <p>Aktif lisans süresi boyunca yayınlanan tüm yeni sürümler ve Pro Stüdyo şablonları ek ücret olmaksızın kullanıma sunulur.</p>
+          <h4>3. Kullanım Sınırları</h4>
+          <p>Uygulamanın lisans doğrulama mekanizmasını atlatmaya veya yetkisiz çoğaltmaya yönelik işlemlerde erişim askıya alınabilir.</p>
+          <h4>4. Bağımsızlık Beyanı</h4>
+          <p>Scrim Yönetici Pro bağımsız bir turnuva yönetimi ve tasarım uygulamasıdır; Krafton, Tencent Games veya PUBG Mobile ile resmi bir ortaklık iddiasında bulunmaz.</p>
+        `
+      }
+    };
+
+    const legalModal = document.getElementById("legalModal");
+    const legalTitle = document.getElementById("legalTitle");
+    const legalBody = document.getElementById("legalBody");
+    document.querySelectorAll("[data-legal]").forEach(btn => {
+      btn.addEventListener("click", () => {
+        setDrawer(false);
+        const doc = LEGAL_DOCS[btn.dataset.legal];
+        if (!doc) return;
+        legalTitle.textContent = doc.title;
+        legalBody.innerHTML = doc.body;
+        legalModal.classList.add("open");
+        legalModal.setAttribute("aria-hidden", "false");
+      });
+    });
+    function closeLegal() {
+      legalModal.classList.remove("open");
+      legalModal.setAttribute("aria-hidden", "true");
+    }
+    document.getElementById("legalCloseBtn").addEventListener("click", closeLegal);
+    legalModal.addEventListener("click", (e) => { if (e.target === legalModal) closeLegal(); });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") { setDrawer(false); closeLegal(); closeGallery(); closeLightbox(); }
+    });
+
+    // 8. SCROLL PROGRESS + SCROLL-SPY
+    const scrollBar = document.getElementById("scrollBar");
+    const spySections = ["nasil-calisir", "sablonlar", "ozellikler", "obeyley", "paketler", "sss"]
+      .map(id => document.getElementById(id)).filter(Boolean);
+    window.addEventListener("scroll", () => {
+      const st = window.scrollY;
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      scrollBar.style.width = max > 0 ? `${(st / max) * 100}%` : "0%";
+      let cur = "";
+      for (const s of spySections) {
+        if (s.getBoundingClientRect().top <= 140) cur = s.id;
+      }
+      document.querySelectorAll(".nav-link, .drawer-link[href^='#']").forEach(a => {
+        a.classList.toggle("active", a.getAttribute("href") === `#${cur}`);
+      });
+    }, { passive: true });
+  </script>
+</body>
+</html>
